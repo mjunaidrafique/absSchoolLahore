@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends FrontendController
 {
@@ -108,7 +109,56 @@ class HomeController extends FrontendController
     {
         //
     }
+/**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getGallery()
+    {
+        return view('frontend.gallery');
 
+    }/**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function DownloadFile()
+    {
+        $myFile = public_path("/pdf/Absform.pdf");
+        $headers = ['Content-Type: application/pdf'];
+        $newName = 'AdmissionForm.pdf';
+
+        return response()->download($myFile, $newName, $headers);
+// Optional: serve the file under a different filename:
+//        $filename = '/Absform.pdf';
+// optional headers
+//        dd($location.$filename);
+//        return response()->download($location, $filename, ['Content-Type' => 'application/pdf']);
+
+    }
+/**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function sendEmail(Request $request)
+    {
+        $name = $request->name;
+        $email =  $request->email;
+        $message =  $request->message;
+        $data = array(
+            'name' => $name,
+            'email_from' => $email,
+            'body' => $message,
+        );
+        Mail::send('frontend.mail', $data, function($message) use ($data,$name,$email){
+            $message->from($email,$name);
+            $message->to('abscadethighschool01@gmail.com')->subject('ABS Message');
+        });
+        return view('frontend.contact-us')->with("success","Your email sended successfully we will contact you soon!");
+
+    }
     /**
      * Store a newly created resource in storage.
      *

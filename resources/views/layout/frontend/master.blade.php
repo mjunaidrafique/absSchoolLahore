@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en-us">
 
 <!-- Mirrored from themelamp.com/html/learnedu/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2020 11:28:48 GMT -->
 <head>
@@ -47,7 +47,7 @@
     {{--<!--<link rel="stylesheet" href="{{asset('css/color/color6.css')}}">-->--}}
     {{--<!--<link rel="stylesheet" href="{{asset('css/color/color7.css')}}">-->--}}
     {{--<!--<link rel="stylesheet" href="{{asset('css/color/color8.css')}}">-->--}}
-    <link rel="stylesheet" href="#" id="colors">
+    {{--<link rel="stylesheet" href="#" id="colors">--}}
 
     @yield('styles')
 </head>
@@ -113,11 +113,11 @@
                         </div>
                         <div class="single-widget">
                             <i class="fa fa-envelope-o"></i>
-                            <h4>Send Message<a href="mailto:ABScadetschool@gmail.com"><span>ABScadetschool@gmail.com</span></a></h4>
+                            <h4>Send Message<a href="mailto:abscadethighschool01@gmail.com"><span>abscadethighschool01@gmail.com</span></a></h4>
                         </div>
                         <div class="single-widget">
                             <i class="fa fa-map-marker"></i>
-                            <h4>Our Location<span>1-Canal Road Mian Aziz Garden Khaira Pul Lahore</span></h4>
+                            <h4>Our Location<span>Mian Aziz Garden Khaira Pul Lahore</span></h4>
                         </div>
                     </div>
                     <!--/ End Header Widget -->
@@ -137,18 +137,18 @@
                             <ul id="nav" class="nav menu navbar-nav">
                                 <li class="@yield('home')"><a href="{{route('home')}}">Home</a></li>
                                 <li class="@yield('about-us')"><a href="{{route('about-us')}}">About Us</a></li>
-                                <li @yield('contact-us')><a href="{{route('contact-us')}}">Contact us</a></li>
+                                <li class="@yield('contact-us')"><a href="{{route('contact-us')}}">Contact us</a></li>
                                 {{--<li @yield('tab')><a href="{{route('teachers')}}">Staff</a></li>--}}
                                 {{--<li @yield('tab')><a href="{{route('cources')}}">Courses</a></li>--}}
 {{--                                <li @yield('tab')><a href="{{route('events')}}">Events</a>--}}
 {{--                                <li @yield('tab')><a href="{{route('events')}}">Fee structure</a>--}}
-{{--                                <li @yield('tab')><a href="{{route('events')}}">Gallery</a>--}}
+                                <li class="@yield('gallery')"><a href="{{route('gallery')}}">Gallery</a>
                                 {{--<li><a href="contact.html">Contact</a></li>--}}
                             </ul>
                             <!-- End Main Menu -->
                             <!-- button -->
                             <div class="button">
-                                <a href="contact.html" class="btn"><i class="fa fa-pencil"></i>Apply Now</a>
+                                <a  href="{{route('download.form')}}" data-scrollto="#enroll" class="btn"><i class="fa fa-file"></i>Download Admission Form</a>
                             </div>
                             <!--/ End Button -->
                         </div>
@@ -174,8 +174,8 @@
                         <div class="logo"><a href="#" style="font-color:#ffffff;font-size:20px;font-weight:800">ABS Cadet School</a></div>
                         <p>Induct young children into a vibrant academic environment and groom them to become brilliant young scholars with an examplary discipline and refined personality traits</p>
                         <ul class="list">
-                            <li><i class="fa fa-phone"></i>Phone: +92 300 4102055 </li>
-                            <li><i class="fa fa-envelope"></i>Email: <a href="mailto:ABScadetschool@gmail.com.com">ABScadetschool@gmail.com</a></li>
+                            <li><i class="fa fa-phone"></i>Phone: +92 300 4102055, (+92) 300 2661404, (042) 36525878</li>
+                            <li><i class="fa fa-envelope"></i>Email: <a href="mailto:abscadethighschool01@gmail.com">abscadethighschool01@gmail.com</a></li>
                             <li><i class="fa fa-map-o"></i>1-Canal Road Mian Aziz Garden Khaira Pul Lahore</li>
                         </ul>
                     </div>
@@ -188,11 +188,11 @@
                         <ul>
                             <li><a href="{{route('home')}}"><i class="fa fa-angle-right"></i>Home</a></li>
                             <li><a href="{{route('about-us')}}"><i class="fa fa-angle-right"></i>About Us</a></li>
-                            {{--<li><a href="#"><i class="fa fa-angle-right"></i>Courses</a></li>--}}
-                            {{--<li><a href="#"><i class="fa fa-angle-right"></i>Events</a></li>--}}
+                            {{--<li><a href="#"><i class="fa fa-angle-right"></i>Books</a></li>--}}
+                            {{--<li><a href="#"><i class="fa fa-angle-right"></i>Teachers</a></li>--}}
                             {{--<li><a href="#"><i class="fa fa-angle-right"></i>Staff</a></li>--}}
                             <li><a href="{{route('contact-us')}}"><i class="fa fa-angle-right"></i>Contact Us</a></li>
-                            {{--<li><a href="#"><i class="fa fa-angle-right"></i>Gallery</a></li>--}}
+                            <li><a href="{{route('gallery')}}"><i class="fa fa-angle-right"></i>Gallery</a></li>
                         </ul>
                     </div>
                     <!--/ End Useful Links -->

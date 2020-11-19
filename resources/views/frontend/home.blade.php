@@ -3,38 +3,33 @@
     active
 @endsection
 @section('content')
-
+<style>
+    .error{
+        color: red;
+    }
+</style>
+{{--<link rel="stylesheet" href={{asset("/interior.css")}} type="text/css" />--}}
     <!-- Slider Area -->
+    <section >
+        <div class="school_name_heaeder">
+            <h1 style="font-size: 2rem;"><img src="{{asset('images/medal.jpg')}}" class="school-logo" style="width: 75px;border-radius: 100px;height: 75px;">
+                Aziz Bhatti Shaheed Cadet High School
+                <img src="{{asset('images/aziz.jpg')}}" style="width: 75px;border-radius: 100px;height: 75px;"
+                     class="school-logo"></h1>
+        </div>
+    </section>
     <section class="home-slider">
-        <div class="slider-active">
             <!-- Single Slider -->
-            <div class="single-slider overlay" style="background-image:url('images/slider/slider3.jpg')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-8 col-12">
-                            <div class="slider-text">
-                                <h1>Our <span>Mission</span> </h1>
-                                <p>Induct young children into a vibrant academic environment and groom them to become brilliant young scholars with an exemplary discipline and refined personality traits. They should be able to excel in any field of life .</p>
-                                <div class="button">
-                                    <a href="courses.html" class="btn primary">Our Courses</a>
-                                    <a href="{{route('about-us')}}" class="btn">About Us</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/ End Single Slider -->
-            <!-- Single Slider -->
-            <div class="single-slider overlay" style="background-image:url('images/slider/slider2.jpg')">
+        <div class="single-slider overlay" style="background-image:url('images/slider/slider1.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-12">
                             <div class="slider-text text-center">
-                                <h1>Our <span>Mission</span> </h1>
-                                <p>Induct young children into a vibrant academic environment and groom them to become brilliant young scholars with an examplary discipline and refined personality traits. They should be able to excel in any field of life .</p>
+
+                                <h1><span>Our Mission</span> </h1>
+                                <p>Induct young children into a vibrant academic environment and groom them to become brilliant young scholars with an exemplary discipline and refined personality traits. They should be able to excel in any field of life .</p>
                                 <div class="button">
-                                    <a href="courses.html" class="btn primary">Our Courses</a>
+                                    <a href="/#course-section" data-scrollto="#course-section" class="btn primary">Our Education Society</a>
                                     <a href="{{route('about-us')}}" class="btn">About Us</a>
                                 </div>
                             </div>
@@ -43,25 +38,6 @@
                 </div>
             </div>
             <!--/ End Single Slider -->
-            <!-- Single Slider -->
-            <div class="single-slider overlay" style="background-image:url('images/slider/slider1.jpg')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 offset-lg-4 col-md-8 offset-md-4 col-12">
-                            <div class="slider-text text-right">
-                                <h1>Our <span>Mission</span> </h1>
-                                <p>Induct young children into a vibrant academic environment and groom them to become brilliant young scholars with an examplary discipline and refined personality traits. They should be able to excel in any field of life .</p>
-                                <div class="button">
-                                    <a href="courses.html" class="btn primary">Our Courses</a>
-                                    <a href="{{route('about-us')}}" class="btn">About Us</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/ End Single Slider -->
-        </div>
     </section>
     <!--/ End Slider Area -->
         <!-- introduction section -->
@@ -70,8 +46,12 @@
             <div class="row">
                 <div class="col-12 wow zoomIn">
                     <div class="section-title">
-                        <h2>Introduction of <span>Aziz Bhatti Shaheed Cadet High School</span> </h2>
-                        <p> Aziz Bhatti Shaheed Cadet High School has been founded on the philosophy that young boys and girls at the age of 3-4 years be inducted into an environment which is distinguished for its academic brilliance as well as an excellent personality grooming system, guided by a touch of Military discipline. A highly qualified academic faculty has been combined with an administration comprising Miltry officers in order to fully cater for the Educational, Moral and Physical requirements of our young students. the school curriculum consists of a very balanced academic course for each class, complemented by extremely effective personality development program which will help the youn students grow up as confident, self rsponsile , Disciplined and refined young scholars, wo will be welcome into the three armed forces of Pakistan or any other field of life they choose to adopt.  </p>
+                        <h2>
+                            {{--<img src="{{asset('images/medal.jpg')}}" class="school-logo" style="width: 75px;border-radius: 100px;height: 75px;">--}}
+                            <span>Introduction</span>
+                            {{--<img src="{{asset('images/aziz.jpg')}}" style="width: 75px;border-radius: 100px;height: 75px;" class="school-logo">--}}
+                            </h2>
+                        <p> Aziz Bhatti Shaheed Cadet High School has been founded on the philosophy that young boys and girls at the age of 3-4 years be inducted into an environment which is distinguished for its academic brilliance as well as an excellent personality grooming system, guided by a touch of Military discipline. A highly qualified academic faculty has been combined with an administration comprising Militry officers in order to fully cater for the Educational, Moral and Physical requirements of our young students. the school curriculum consists of a very balanced academic course for each class, complemented by extremely effective personality development program which will help the young students grow up as confident, self rsponsile , Disciplined and refined young scholars, wo will be welcome into the three armed forces of Pakistan or any other field of life they choose to adopt.  </p>
                     </div>
                 </div>
             </div>
@@ -85,12 +65,14 @@
                         <!-- Single Testimonial -->
                         <div class="single-testimonial">
                             <img src="{{asset('images/brag-javed.jpg')}}" alt="#">
-                            <div class="main-content"   style="text-align: center;">
-                                <h3 class="name">Patron In Chief <span>Brigadier Javed Ahmed Hashmi</span></h3>
-                                <h5> <span>Sitara-e-imtiaz</span>(<span>Military</span>)</h5>
-                                <h4> Our Principal vision</h4>
+                            <div class="main-content" >
+                                <div class="patron_heading">
+                                    <h3 class="name" style="font-size: 1.25rem;"><mark style="background: #f5e762;">Patron In Chief</mark> <br>
+                                    <span>Brigadier Javed Ahmed Hashmi</span></h3>
+                                <h5 style="font-size: 1rem"><span style="margin-left: 110px">Sitara-e-imtiaz</span>(<span>Military</span>)</h5>
+                                </div>
                                 <p> Imparting education is the noblest pursuit of life. Aziz Bhatti Shaheed Cadet High School has been founded on a comprehensive philosophy of education, duly complemented with a child grooming programme for inculcating the finest traits of personality in the young minds of students.</p>
-                                <p>The school will serve as an alma mater for young students to shape their lives into ideal personalities and groom them into excellent citizens of Pakistan.</p>
+                                <p>The school will serve as an alma mater for young students to shape their lives into ideal personalities and groom them to excellent citizens of Pakistan.</p>
                                 <p>At Aziz Bhatti Shaheed Cadet High School, we have a composite educational and co-curricular programme in order to groom young boys and girls for preparing them to assume important responsibilites in the three armed forces as well as in other walks of life.</p>
                             </div>
                         </div>
@@ -106,8 +88,8 @@
             <div class="row">
                 <div class="col-12 wow zoomIn">
                     <div class="section-title">
-                        <h2>Our<span>Academics</span></h2>
-                        <p>At Aziz Bhatti Shaheed Cadet High School, the training philosophy consists of practical based teaching techniques and activity based learning programmes. An able team of cducationists has compiled a composite syllabus for each class which is in conformity with the age grouping as well as intellectual level of young sudents.The junior school begins with the play Group ad comprises Kindergaeten class to Grade5. The middle Section consists of classes 6 to 8, whereas the high section comprises 9th and 10th grades. Student of class 7 onwards are prepared every year to enter the cadet colleges.</p>
+                        <h2><span >Our Academics </span></h2>
+                        <p>At Aziz Bhatti Shaheed Cadet High School, the training philosophy consists of practical based teaching techniques and activity based learning programmes. An able team of ecducationist has compiled a composite syllabus for each class which is in conformity with the age grouping as well as intellectual level of young students.The Junior School begins with the Play Group and comprises Kindergaeten class to Grade-5. The Middle Section consists of classes 6 to 8, whereas the High Section comprises 9th and 10th Grades. Student of class 7 onwards are prepared every year to enter the cadet colleges.</p>
                     </div>
                 </div>
             </div>
@@ -115,7 +97,7 @@
     </section>
     <!--/ End academics -->
     <!-- Enroll -->
-    <section class="enroll overlay section" data-stellar-background-ratio="0.5">
+    <section class="enroll overlay section" id="enroll" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
@@ -127,8 +109,8 @@
                                     <h2>Enroll Today</h2>
                                     <p>Before you miss the chance to get your seat!</p>
                                 </div>
-                                <!-- Form -->
-                                <form class="form"  id="emailForm" >
+                                {{--<!-- Form -->--}}
+                                <form class="form"  id="emailForm" name="emailForm"  method="post" action="{{route('send.email')}}">
                                     @csrf
                                     <div class="form-group">
                                         <label>Enter Your name</label>
@@ -146,14 +128,14 @@
                                         <button type="submit" class="btn send_email">Register Now</button>
                                     </div>
                                 </form>
-                                <!--/ End Form -->
+                                {{--<!--/ End Form -->--}}
                             </div>
-                            <!-- Single Enroll -->
+                            {{--<!-- Single Enroll -->--}}
                         </div>
                         <div class="col-lg-6 col-12 wow fadeInUp" data-wow-delay="0.6s">
                             <div class="enroll-right">
                                 <div class="section-title">
-                                    <h2>We Have More than 2,000+ Student Serving in different fields of Pakistan!</h2>
+                                    <h2>We are proud to see our Students Serving in different fields of life in Pakistan!</h2>
                                     <p></p>
                                 </div>
                             </div>
@@ -205,15 +187,15 @@
             <div class="row">
                 <div class="col-12 wow zoomIn">
                     <div class="section-title">
-                        <h2>Kids Grooming</h2>
+                        <h2><span>Kids Grooming</span></h2>
                         <p> Aziz Bhatti Shaheed Cadet High School has much more to offer than an ordinary school can.
-                            Our vision of education includes character building, love for the ideology of Pakistan and a disciplined outlook of life.
+                            Our vision of education includes character building through teaching of Quran and ahadees, love for the ideology of Pakistan and a disciplined outlook of life.
                             We believe that the finest human qualities are instilled in the character of a person right in the childhood.
-                            Hence our emphases in the school is evenly placed in academic curriclum as well on personality grooming of the children. That
+                            Hence our emphasis in the school is evenly placed at academic curriclum as well on personality grooming of the children. That
                         includes inculcating and promoting the finest qualities of character which will bear them through all situations in life.</p>
                     </div>
                     <!-- Blogs -->
-                    <section class="blog section">
+                    <section class="blog section" style="padding: 10px 0px;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
@@ -221,154 +203,63 @@
                                         <!-- Single Blog -->
                                         <div class="single-blog">
                                             <div class="blog-head overlay">
-                                                <div class="date">
-                                                    <h4>10<span>May</span></h4>
-                                                </div>
-                                                <img src="images/blog/blog1.jpg" alt="#">
-                                            </div>
-                                            <div class="blog-content">
-                                                <h4 class="blog-title"><a href="blog-single.html">Our Student Have sit amet egestas</a></h4>
-                                                <div class="blog-info">
-                                                    <a href="#"><i class="fa fa-user"></i>By: Admin</a>
-                                                    <a href="#"><i class="fa fa-list"></i>Learning</a>
-                                                    <a href="#"><i class="fa fa-heart-o"></i>53K</a>
-                                                </div>
-                                                <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Et harum quidem rerum facilis est et expedita distinctio</p>
-                                                <div class="button">
-                                                    <a href="blog-single.html" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-                                                </div>
+                                                <img src="images/grooming/1.jpg" alt="#">
                                             </div>
                                         </div>
                                         <!-- End Single Blog -->
                                         <!-- Single Blog -->
                                         <div class="single-blog">
                                             <div class="blog-head overlay">
-                                                <div class="date">
-                                                    <h4>05<span>May</span></h4>
-                                                </div>
-                                                <img src="images/blog/blog2.jpg" alt="#">
-                                            </div>
-                                            <div class="blog-content">
-                                                <h4 class="blog-title"><a href="blog-single.html">Our teachers egestas erat dignissim</a></h4>
-                                                <div class="blog-info">
-                                                    <a href="#"><i class="fa fa-user"></i>By: Admin</a>
-                                                    <a href="#"><i class="fa fa-list"></i>Academic</a>
-                                                    <a href="#"><i class="fa fa-heart-o"></i>33K</a>
-                                                </div>
-                                                <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Et harum quidem rerum facilis est et expedita distinctio</p>
-                                                <div class="button">
-                                                    <a href="blog-single.html" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-                                                </div>
+                                                <img src="images/grooming/2.jpg" alt="#">
                                             </div>
                                         </div>
                                         <!-- End Single Blog -->
                                         <!-- Single Blog -->
                                         <div class="single-blog">
                                             <div class="blog-head overlay">
-                                                <div class="date">
-                                                    <h4>15<span>Mar</span></h4>
-                                                </div>
-                                                <img src="images/blog/blog3.jpg" alt="#">
-                                            </div>
-                                            <div class="blog-content">
-                                                <h4 class="blog-title"><a href="blog-single.html">We are Proffesional Have velit Landon</a></h4>
-                                                <div class="blog-info">
-                                                    <a href="#"><i class="fa fa-user"></i>By: Admin</a>
-                                                    <a href="#"><i class="fa fa-list"></i>Knowledge</a>
-                                                    <a href="#"><i class="fa fa-heart-o"></i>11K</a>
-                                                </div>
-                                                <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Et harum quidem rerum facilis est et expedita distinctio</p>
-                                                <div class="button">
-                                                    <a href="blog-single.html" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-                                                </div>
+                                                <img src="images/grooming/3.jpg" alt="#">
                                             </div>
                                         </div>
                                         <!-- End Single Blog -->
                                         <!-- Single Blog -->
                                         <div class="single-blog">
                                             <div class="blog-head overlay">
-                                                <div class="date">
-                                                    <h4>10<span>Mar</span></h4>
-                                                </div>
-                                                <img src="images/blog/blog4.jpg" alt="#">
-                                            </div>
-                                            <div class="blog-content">
-                                                <h4 class="blog-title"><a href="blog-single.html">Our Student Have sit amet egestas</a></h4>
-                                                <div class="blog-info">
-                                                    <a href="#"><i class="fa fa-user"></i>By: Admin</a>
-                                                    <a href="#"><i class="fa fa-list"></i>Learning</a>
-                                                    <a href="#"><i class="fa fa-heart-o"></i>53K</a>
-                                                </div>
-                                                <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Et harum quidem rerum facilis est et expedita distinctio</p>
-                                                <div class="button">
-                                                    <a href="blog-single.html" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-                                                </div>
+                                                <img src="images/grooming/4.jpg" alt="#">
                                             </div>
                                         </div>
                                         <!-- End Single Blog -->
                                         <!-- Single Blog -->
                                         <div class="single-blog">
                                             <div class="blog-head overlay">
-                                                <div class="date">
-                                                    <h4>25<span>Feb</span></h4>
-                                                </div>
-                                                <img src="images/blog/blog2.jpg" alt="#">
-                                            </div>
-                                            <div class="blog-content">
-                                                <h4 class="blog-title"><a href="blog-single.html">Our teachers egestas erat dignissim</a></h4>
-                                                <div class="blog-info">
-                                                    <a href="#"><i class="fa fa-user"></i>By: Admin</a>
-                                                    <a href="#"><i class="fa fa-list"></i>Academic</a>
-                                                    <a href="#"><i class="fa fa-heart-o"></i>33K</a>
-                                                </div>
-                                                <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Et harum quidem rerum facilis est et expedita distinctio</p>
-                                                <div class="button">
-                                                    <a href="blog-single.html" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-                                                </div>
+                                                <img src="images/grooming/5.jpg" alt="#">
                                             </div>
                                         </div>
                                         <!-- End Single Blog -->
                                         <!-- Single Blog -->
                                         <div class="single-blog">
                                             <div class="blog-head overlay">
-                                                <div class="date">
-                                                    <h4>28<span>Feb</span></h4>
-                                                </div>
-                                                <img src="images/blog/blog3.jpg" alt="#">
-                                            </div>
-                                            <div class="blog-content">
-                                                <h4 class="blog-title"><a href="blog-single.html">We are Proffesional Have velit Landon</a></h4>
-                                                <div class="blog-info">
-                                                    <a href="#"><i class="fa fa-user"></i>By: Admin</a>
-                                                    <a href="#"><i class="fa fa-list"></i>Knowledge</a>
-                                                    <a href="#"><i class="fa fa-heart-o"></i>11K</a>
-                                                </div>
-                                                <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Et harum quidem rerum facilis est et expedita distinctio</p>
-                                                <div class="button">
-                                                    <a href="blog-single.html" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-                                                </div>
+                                                <img src="images/grooming/6.jpg" alt="#">
                                             </div>
                                         </div>
                                         <!-- End Single Blog -->
                                         <!-- Single Blog -->
                                         <div class="single-blog">
                                             <div class="blog-head overlay">
-                                                <div class="date">
-                                                    <h4>03<span>Jan</span></h4>
-                                                </div>
-                                                <img src="images/blog/blog4.jpg" alt="#">
+                                                <img src="images/grooming/7.jpg" alt="#">
                                             </div>
-                                            <div class="blog-content">
-                                                <h4 class="blog-title"><a href="blog-single.html">Our Student Have sit amet egestas</a></h4>
-                                                <div class="blog-info">
-                                                    <a href="#"><i class="fa fa-user"></i>By: Admin</a>
-                                                    <a href="#"><i class="fa fa-list"></i>Learning</a>
-                                                    <a href="#"><i class="fa fa-heart-o"></i>53K</a>
-                                                </div>
-                                                <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Et harum quidem rerum facilis est et expedita distinctio</p>
-                                                <div class="button">
-                                                    <a href="blog-single.html" class="btn">Read More<i class="fa fa-angle-double-right"></i></a>
-                                                </div>
+                                        </div>
+                                        <!-- End Single Blog -->
+                                        <!-- Single Blog -->
+                                        <div class="single-blog">
+                                            <div class="blog-head overlay">
+                                                <img src="images/grooming/8.jpg" alt="#">
+                                            </div>
+                                        </div>
+                                        <!-- End Single Blog -->
+                                        <!-- Single Blog -->
+                                        <div class="single-blog">
+                                            <div class="blog-head overlay">
+                                                <img src="images/grooming/9.jpg" alt="#">
                                             </div>
                                         </div>
                                         <!-- End Single Blog -->
@@ -383,12 +274,12 @@
         </div>
     </section>
     <!-- Courses -->
-    <section class="courses section-bg section">
+    <section class="courses section-bg section" id="course-section">
         <div class="container">
             <div class="row">
                 <div class="col-12 wow zoomIn">
                     <div class="section-title">
-                        <h2>Popular <span>Courses</span> We Offer</h2>
+                        <h2><span>ABS Society</span></h2>
                         <p>Along with school courses we provide a vide varity of other courses which makes students as well as their family groom. anyone other than our school students can also learn these courses.</p>
                     </div>
                 </div>
@@ -399,114 +290,73 @@
                         <!-- Single Course -->
                         <div class="single-course">
                             <div class="course-head overlay">
-                                <img src="images/course/course1.jpg" alt="#">
+                                <img src="images/ad1.jpg" alt="#">
                                 <a href="course-single.html" class="btn"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="single-content">
                                 <h4><a href="course-single.html"><span>Quran and Ahades</span></a></h4>
-                                <p>Learn the basics of Quran recitation and also advance talafuz with a bunch of ahades in this course and Make your after world a pleasent place.</p>
-                            </div>
-                            <div class="course-meta">
-                                <div class="meta-left">
-                                    <span><i class="fa fa-users"></i>25 Seats</span>
-                                    <span><i class="fa fa-clock-o"></i>6 Months</span>
-                                </div>
-                                <span class="price">Rs 3000/month</span>
+                                <p>Learn the basics of Quran recitation with Tajweed as well as learning of selected ahadees in this course.Education of Quran and Ahadees is a compulsary componant of academic curriculum.</p>
                             </div>
                         </div>
                         <!--/ End Single Course -->
                         <!-- Single Course -->
                         <div class="single-course">
                             <div class="course-head overlay">
-                                <img src="images/course/course1.jpg" alt="#">
+                                <img src="images/sp1.jpg" alt="#">
                                 <a href="course-single.html" class="btn"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="single-content">
                                 <h4><a href="course-single.html"><span>Spoken English </span></a></h4>
-                                <p>Learn how to have an English conversation and gain confidence speaking English with this free course.</p>
+                                <p>Especial class of spoken English for all grades is organised in the school.</p>
                             </div>
-                            <div class="course-meta">
-                                <div class="meta-left">
-                                    <span><i class="fa fa-users"></i>25 Seats</span>
-                                    <span><i class="fa fa-clock-o"></i>6 Months</span>
-                                </div>
-                                <span class="price">Rs 3000/month</span>
-                            </div>
+
                         </div>
                         <!--/ End Single Course -->
                         <!-- Single Course -->
                         <div class="single-course">
                             <div class="course-head overlay">
-                                <img src="images/course/course2.jpg" alt="#">
+                                <img src="images/c1.jpg" alt="#">
                                 <a href="course-single.html" class="btn"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="single-content">
-                                <h4><a href="course-single.html"><span>Computer</span>Courses</a></h4>
-                                <p>This course is an introduction for non-computer science students. Instead this course is a gentler, lighter survey course without delving too much into technical details.</p>
-                            </div>
-                            <div class="course-meta">
-                                <div class="meta-left">
-                                    <span><i class="fa fa-users"></i>20 Seats</span>
-                                    <span><i class="fa fa-clock-o"></i>3 Months</span>
-                                </div>
-                                <span class="price">Rs 3500/month</span>
+                                <h4><a href="course-single.html"><span>Computer Lab</span></a></h4>
+                                <p>A well equipped computer lab is available in the school for computer curriculm of the students. It also caters for special computer courses for advanced level.</p>
                             </div>
                         </div>
                         <!--/ End Single Course -->
                         <!-- Single Course -->
                         <div class="single-course">
                             <div class="course-head overlay">
-                                <img src="images/course/course3.jpg" alt="#">
+                                <img src="images/m1.jpg" alt="#">
                                 <a href="course-single.html" class="btn"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="single-content">
-                                <h4><a href="course-single.html"><span>Science</span> Practicles</a></h4>
-                                <p>This course is an intrduction for students of class 8 to onward specially for the matric level students.tought by Experianced teachers with perfect and accurate skills.</p>
-                            </div>
-                            <div class="course-meta">
-                                <div class="meta-left">
-                                    <span><i class="fa fa-users"></i>25 Seat</span>
-                                    <span><i class="fa fa-clock-o"></i>2 Years</span>
-                                </div>
-                                <span class="price">Rs 4500/month</span>
+                                <h4><a href="course-single.html"><span>Science Lab</span></a></h4>
+                                <p>A well furnished Physics Chemistry & Biology lab of the school is available for all kinds of scientific pracitals needed for high school students.</p>
                             </div>
                         </div>
                         <!--/ End Single Course -->
                         <!-- Single Course -->
                         <div class="single-course">
                             <div class="course-head overlay">
-                                <img src="images/course/course1.jpg" alt="#">
+                                <img src="images/a1.jpg" alt="#">
                                 <a href="course-single.html" class="btn"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="single-content">
                                 <h4><a href="course-single.html"><span>Art and Design</span></a></h4>
-                                <p>This course is aimed at those who want to advance to British degree programmes. It allows students to get a necessary level of creative skills, both theoretical and practical. </p>
-                            </div>
-                            <div class="course-meta">
-                                <div class="meta-left">
-                                    <span><i class="fa fa-users"></i>20 Seat</span>
-                                    <span><i class="fa fa-clock-o"></i>3 Months</span>
-                                </div>
-                                <span class="price">Rs 2500/month</span>
+                                <p>The Art & Design society of school is headed by a qualified Art Designer. It provides ample opportunity to students for learning and displaying their art & design facilities. </p>
                             </div>
                         </div>
                         <!--/ End Single Course -->
                         <!-- Single Course -->
                         <div class="single-course">
                             <div class="course-head overlay">
-                                <img src="images/course/course3.jpg" alt="#">
+                                <img src="images/grooming/9.jpg" alt="#">
                                 <a href="course-single.html" class="btn"><i class="fa fa-link"></i></a>
                             </div>
                             <div class="single-content">
                                 <h4><a href="course-single.html"><span>Karaty & Gymnastic</span></a></h4>
-                                <p>It is our goal that the experiences provided by these activities will contribute to the development of an active, healthy lifestyle. </p>
-                            </div>
-                            <div class="course-meta">
-                                <div class="meta-left">
-                                    <span><i class="fa fa-users"></i>25 Seat</span>
-                                    <span><i class="fa fa-clock-o"></i>6 Months</span>
-                                </div>
-                                <span class="price">Rs 4000/month</span>
+                                <p>It is our belief that the experiences Physical Healthh and Positive personality will contribute to the development of an active and healthy lifestyle. </p>
                             </div>
                         </div>
                         <!--/ End Single Course -->
@@ -529,12 +379,12 @@
                             <h2 style="margin-bottom: 10px;">Attendance</h2>
                             <p>Students must attend morning assembly. Late comers by more than 20 minutes will not be
                                 allowed into the classes. Students upto class 2 will not be allowed to leave school without
-                                parents/guardian. A student missing an examination will not be given a mark-up exam.</p>
+                                parents/guardian. A student missing an examination will not be given a make-up exam.</p>
                         </div>
                         <div class="text-content" style="text-align:left;margin-top: 30px;">
                             <h2 style="margin-bottom: 10px;">Uniform</h2>
-                            <p>School uniform is compulsory for all students.Biys are required to take a smart hair-cut .
-                             Girls are required to tir back their hair and are not allowed to any kinf of make-up or jewelry.</p>
+                            <p>School uniform is compulsory for all students.Boys are required to keep a smart hair-cut .
+                             Girls are required to tie back their hair and are not allowed to any kind of make-up or jewelry.</p>
                         </div>
                     </div>
                 </div>
@@ -548,7 +398,7 @@
             <div class="row">
                 <div class="col-12 wow zoomIn">
                     <div class="section-title">
-                        <h2>Our Awesome <span>Teachers</span></h2>
+                        <h2><span>Our Awesome Teachers</span></h2>
                         <p>We have Best Educational staff in this area they all are qualified and motivated and expert in their subjects.</p>
                     </div>
                 </div>
@@ -557,17 +407,13 @@
                 <div class="col-lg-3 col-md-6 col-12 wow fadeIn" data-wow-delay="0.4s">
                     <!-- Single Team -->
                     <div class="single-team">
-                        <img src="{{asset('images/team/team1.jpg')}}" alt="#">
+                        <img src="{{asset('images/team/brag-javed.jpg')}}" alt="#">
                         <div class="team-hover">
                             <h4>Brigadier Javed Ahmed<span> English </span></h4>
-                            <h5>MA in English</h5>
-                            <p>Teaches the student basics of English language in morning assembly and responsible for Board classes English subject.</p>
-                            {{--<ul class="social">--}}
-                                {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-youtube"></i></a></li>--}}
-                            {{--</ul>--}}
+                            <p style="color: #000;font-weight: 700;">BSc hons(War Studies)</p>
+                            <p  style="color: #000;font-weight: 700;">Master in Islamic-Studies</p>
+                            <p  style="color: #000;font-weight: 700;" >Master in Pak-Studies</p>
+                            <p  style="color: #000;font-weight: 700;">Master in History</p>
                         </div>
                     </div>
                     <!--/ End Single Team -->
@@ -575,17 +421,10 @@
                 <div class="col-lg-3 col-md-6 col-12 wow fadeIn" data-wow-delay="0.6s">
                     <!-- Single Team -->
                     <div class="single-team">
-                        <img src="{{asset('images/team/team2.jpg')}}" alt="#">
+                        <img src="{{asset('images/team/qariyousaf.jpg')}}" alt="#">
                         <div class="team-hover">
                             <h4 class="name">Qari Muhammad Yousaf<span class="work">Quran and Ahades (Islamiyat)</span></h4>
-                            <h5>MA in islamiyat</h5>
-                            <p> Teaches the students quran and ahades in morning assembly and also teach students Islamiyat subeject.</p>
-                            {{--<ul class="social">--}}
-                                {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-youtube"></i></a></li>--}}
-                            {{--</ul>--}}
+                            <p  style="color: #000;font-weight: 700;">Master in Islamic-Studies</p>
                         </div>
                     </div>
                     <!--/ End Single Team -->
@@ -593,17 +432,10 @@
                 <div class="col-lg-3 col-md-6 col-12 wow fadeIn" data-wow-delay="0.8s">
                     <!-- Single Team -->
                     <div class="single-team">
-                        <img src="{{asset('images/team/team3.jpg')}}" alt="#">
+                        <img src="{{asset('images/team/missrubina.jpg')}}" alt="#">
                         <div class="team-hover">
                             <h4 class="name">Miss Rubina<span class="work">Urdu</span></h4>
-                            <h5>MA in Urdu</h5>
-                            <p>Responsible for teaching Urdu subject to all classes and also Head of urdu society of school</p>
-                            {{--<ul class="social">--}}
-                                {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-youtube"></i></a></li>--}}
-                            {{--</ul>--}}
+                            <p  style="color: #000;font-weight: 700;">Master in Urdu</p>
                         </div>
                     </div>
                     <!--/ End Single Team -->
@@ -611,16 +443,10 @@
                 <div class="col-lg-3 col-md-6 col-12 wow fadeIn" data-wow-delay="1s">
                     <!-- Single Team -->
                     <div class="single-team">
-                        <img src="{{asset('images/team/team4.jpg')}}" alt="#">
+                        <img src="{{asset('images/team/misssajida.jpg')}}" alt="#">
                         <div class="team-hover">
                             <h4 class="name">Miss Sajida<span class="work">Science Teacher</span></h4>
-                            <p>Responsible for teaching science subject to all classes and also head of school science department</p>
-                            {{--<ul class="social">--}}
-                                {{--<li><a href="#"><i class="fa fa-facebook"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-twitter"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>--}}
-                                {{--<li><a href="#"><i class="fa fa-youtube"></i></a></li>--}}
-                            {{--</ul>--}}
+                            <p  style="color: #000;font-weight: 700;">BS in Zoology</p>
                         </div>
                     </div>
                     <!--/ End Single Team -->
@@ -755,13 +581,41 @@
 
 @stop
 
-@section('script')
+@section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
     <script type="text/javascript">
         $( document ).ready(function() {
-          
-
-
-
-        });
+                // Initialize form validation on the registration form.
+                // It has the name attribute "registration"
+                $("#emailForm").validate({
+                    // Specify validation rules
+                    rules: {
+                        // The key name on the left side is the name attribute
+                        // of an input field. Validation rules are defined
+                        // on the right side
+                        name: "required",
+                        message: "required",
+                        email: {
+                            required: true,
+                            // Specify that email should be validated
+                            // by the built-in "email" rule
+                            email: true
+                        },
+                    },
+                    // Specify validation error messages
+                    messages: {
+                        name: "Please enter your name",
+                        message: "please enter your message details",
+                        email: "Please enter a valid email address"
+                    },
+                    // Make sure the form is submitted to the destination defined
+                    // in the "action" attribute of the form when valid
+                    submitHandler: function(form) {
+                        form.submit();
+                    }
+                });
+            });
     </script>
     @endsection

@@ -432,7 +432,7 @@ Version:	1.0
 	Enroll CSS
 =================================*/
 .enroll {
-	background-image: url('../images/slider/slider2.jpg');
+	background-image: url('../images/enrollbg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
@@ -1021,6 +1021,7 @@ Version:	1.0
 .team .single-team {
 	position: relative;
 	margin-top: 30px;
+	height: 350px;
 }
 .team .single-team img{
 	height:100%;
@@ -2878,6 +2879,28 @@ width: 100%;
 }
 .footer .copyright a:hover{
 	color:#fff;
+}
+.school_name_heaeder{
+	text-align: center;
+	padding: 20px;
+	color: #55b26b;
+	text-shadow: 1px 5px 4px #28282847;
+}
+.school-logo{
+	height: 70px;
+	width: 100px;
+	border-radius: 100px;
+}
+.course-head{
+	height: 300px!important;
+}
+.gallery_img{
+	/*height: 200px;*/
+	/*width: 250px;*/
+	margin: 10px 0px;
+}
+.img-thumbnail{
+	height: 200px!important;
 }
 /*=============================
 	End Footer CSS

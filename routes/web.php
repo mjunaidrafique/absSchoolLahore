@@ -19,4 +19,7 @@ Route::prefix('abs')->group(function (){
     Route::get('/teachers', 'Frontend\HomeController@getTeachers')->name('teachers');
     Route::get('/cources', 'Frontend\HomeController@getCources')->name('cources');
     Route::get('/events', 'Frontend\HomeController@getEvents')->name('events');
+    Route::get('/gallery', 'Frontend\HomeController@getGallery')->name('gallery');
+    Route::post('/send/email', 'Frontend\HomeController@sendEmail')->name('send.email');
+    Route::get('download', 'Frontend\HomeController@DownloadFile')->name('download.form');
 });
